@@ -37,13 +37,13 @@ public class Next_Smaller_Element {
     // The main method to execute and test the code
     public static void main(String[] args) {
         // Create an instance of the class
-        Next_Greater_Element solver = new Next_Greater_Element();
+        Next_Smaller_Element solver = new Next_Smaller_Element();
         
         // Example test case array
         int[] arr = {6, 8, 0, 1, 3};
         
         // Call the method and store the result
-        ArrayList<Integer> result = solver.nextLargerElement(arr);
+        ArrayList<Integer> result = solver.nextSmallerElement(arr);
         
         // Print the input and output clearly
         System.out.print("Input Array:  [");
