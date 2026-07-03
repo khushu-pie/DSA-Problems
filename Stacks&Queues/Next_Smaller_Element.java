@@ -16,12 +16,12 @@ public class Next_Smaller_Element {
         // Traverse the array from left to right
         for (int i = 0; i < n; i++) {
             
-            // While stack is not empty and the current element is greater 
+            // While stack is not empty and the current element is smaller 
             // than the element at the index stored at the top of the stack
             while (!stack.isEmpty() && arr[i] < arr[stack.peek()]) {
                 // Pop the index from the stack
                 int indexToUpdate = stack.pop();
-                // The current element arr[i] is the next larger element for arr[indexToUpdate]
+                // The current element arr[i] is the next smaller element for arr[indexToUpdate]
                 res.set(indexToUpdate, arr[i]);
             }
             
@@ -29,7 +29,7 @@ public class Next_Smaller_Element {
             stack.push(i);
         }
         
-        // Any indices left in the stack have no larger element to their right,
+        // Any indices left in the stack have no smaller element to their right,
         // and they will safely remain as -1 (our default value).
         return res;
     }
@@ -52,6 +52,6 @@ public class Next_Smaller_Element {
         }
         System.out.println("]");
         
-        System.out.println("Next Greater: " + result);
+        System.out.println("Next smaller: " + result);
     }
 }
